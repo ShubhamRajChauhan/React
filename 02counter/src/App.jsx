@@ -16,8 +16,15 @@ function App() {
     // console.log("clicked", counter) //working
     // counter = counter + 1 //not working
 
-    counter = counter + 1
-    setCounter(counter)
+    
+    // setCounter(counter + 1)
+    // Interview : repeat karenge to kya print hoga 
+    // setCounter(counter + 1)
+    // setCounter(counter + 1)
+    // setCounter(counter + 1) // kitne baar v repeat kro , ek baar hi update hoga , kyun ki batch ke form mai jata hai, aur jitne duplicates hai unko ek hi batch samajhta hai
+    //but if we want to update like this
+    setCounter(prevCounter => prevCounter + 1)
+    setCounter(prevCounter => prevCounter + 1) //ab ye bunch of packet nhi hai , hum previous state le rhe hai
   }
 
 
